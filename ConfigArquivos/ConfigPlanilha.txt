@@ -1,7 +1,24 @@
-[CAMINHO]|C:\ADRRBR\Python\Projetos\Projetos_Desenv\venv\ConfigArquivos\
+***** As informações entre [ ] são palavras reservadas e o caracter | é utilizado como separador entre a palavra reservada e o dado informado para configuração.
+
+***** Informe aqui o caminho onde se encontra a planilha. 
+[CAMINHO]|C:\ADRRBR\Python\Projetos\Executa\
+
+***** Informe aqui o nome da planilha. 
 [NOME]|Clientes.xlsx
+
+***** Informe aqui o nome da pasta de trabalho (da planiha) onde se encontram os dados para inserir na tabela do banco de dados SQL Server. 
 [PASTA TRABALHO]|INC
+
+***** Informe aqui a linha inicial para leitura da planilha (considere que a primeira linha sempre será assumida como cabeçalho. Exemplo: Se informar a linha 8, esta será 
+***** desprezada como dado, pois será o cabeçalho. Portanto, os dados serão gravados no SQL Server a partir da linha 9).
 [LINHA INICIAL]|1
+
+***** Informe aqui a linha final para leitura da planilha (Não é necessário colocar exatamente a última linha válida para leitura total da planilha).
+***** Caso queira todas as linhas da planilha, basta informar uma linha consideravelmente de grande intervalo. Exemplo: A planilha tem 5 linhas e foi informado 5000 como linha final.
+***** Porém, caso queira apenas 2 registros deverá informar a linha 3 (a primeira linha sempre será assumida como cabeçalho).
 [LINHA FINAL]|5000
+
+***** Informe aqui a faixa de células para leitura da planilha na pasta de trabalho informada. Exemplo: B:D,F,G:H (célula B à D - F - G à H)
 [FAIXA DE CELULAS]|A:H
 
+***** Se você preferir, após ter e entendido os comentários pode eliminar as linhas comentadas (iniciadas com *****). 

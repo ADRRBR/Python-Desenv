@@ -1,7 +1,20 @@
+***** As informações entre [ ] são palavras reservadas e o caracter | é utilizado como separador entre a palavra reservada e o dado informado para configuração.
+
+***** Coloque aqui as palavras reservadas < AUTENTICACAO WINDOWS > ou < AUTENTICACAO SQL SERVER > 
 [TIPO CONEXAO SQL SERVER]|AUTENTICACAO WINDOWS
+
+***** Coloque aqui seu servidor de banco de dados SQLServer (LAPTOP-NC2UQK3P\SQLEXPRESS é o meu!)
 [SERVIDOR SQL SERVER]|LAPTOP-NC2UQK3P\SQLEXPRESS
-[BANCO DADOS SQL SERVER]|DB_T_PYTHON
-[USUARIO SQL SERVER]|sa
-[SENHA SQL SERVER]|admin001
+
+***** Coloque aqui seu banco de dados SQLServer (BD_ADRRBR é o meu!) - O script < CriaBancoDados_e_Estrutura.sql > cria o banco de dados < DB_ADRRBR > mas você pode mudar no script.
+[BANCO DADOS SQL SERVER]|BD_ADRRBR
+
+***** Coloque aqui seu usuario SQLServer caso utilize -> [TIPO CONEXAO SQL SERVER]AUTENTICACAO SQL SERVER
+[USUARIO SQL SERVER]|SEU_USUARIO_SQL_SERVER         
+
+***** Coloque aqui a senha do seu usuario SQLServer caso tenha informado -> [USUARIO SQL SERVER]
+[SENHA SQL SERVER]|SUA_SENHA_USUARIO_SQL_SERVER 
+
+***** Se você preferir, após ter e entendido os comentários pode eliminar as linhas comentadas (iniciadas com *****). 
 
 
