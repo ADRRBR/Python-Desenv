@@ -109,7 +109,7 @@ class Planilha:
 
         #Arquivo de Configuração não Informado, Assume o Caminho e Nome Padrão
         if (__CaminhoArquivo == '' or __NomeArquivo == ''):
-            __CaminhoArquivo = 'C:\ADRRBR\ConfigArquivos\ '.strip()
+            __CaminhoArquivo = os.getcwd() + "\ConfigArquivos\ ".strip()
             __NomeArquivo = 'ConfigPlanilha.txt'
 
         if not ExisteArquivo(__CaminhoArquivo, __NomeArquivo):

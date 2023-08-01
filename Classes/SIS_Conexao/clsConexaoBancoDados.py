@@ -153,7 +153,7 @@ class ConexaoSQLServer:
 
         #Arquivo de Configuração não Informado, Assume o Caminho e Nome Padrão
         if (__CaminhoArquivo == '' or __NomeArquivo == ''):
-            __CaminhoArquivo = 'C:\ADRRBR\ConfigArquivos\ '.strip()
+            __CaminhoArquivo = os.getcwd() + "\ConfigArquivos\ ".strip()
             __NomeArquivo = 'ConfigSQLServer.txt'
 
         if not ExisteArquivo(__CaminhoArquivo, __NomeArquivo):
@@ -222,6 +222,49 @@ class ConexaoSQLServer:
         else:
             if self.__status != StatusExecucao.Sucesso:
                 self.__mensagem += f'. Ao executar o método < {vMetodoConexao} >'
+
+    # (executaArquivoScript) Método que Executa/Aplica um Script Conforme o Conteúdo de um Arquivo.
+    def executaArquivoScript(self, CaminhoArquivo, NomeArquivo):
+        self.__LimpaStatus()
+
+        __CaminhoArquivo = CaminhoArquivo
+        __NomeArquivo = NomeArquivo
+
+        if not ExisteArquivo(__CaminhoArquivo, __NomeArquivo):
+            self.__status = StatusExecucao.Erro
+            self.__mensagem = 'O arquivo de script não foi localizado em ' + __CaminhoArquivo + __NomeArquivo + '. Método < executaArquivoScript >'
+            return
+
+        try:
+            arq = AbreArquivo(__CaminhoArquivo, __NomeArquivo)
+            if arq == False:
+                self.__status = StatusExecucao.Erro
+                self.__mensagem = 'Não foi possível ler o arquivo de script em ' + __CaminhoArquivo + __NomeArquivo + '. Método < executaArquivoScript >'
+                return
+
+            linhas = arq.readlines()
+
+            script = ' '
+            for linha in linhas:
+                script += linha
+
+            arq.close()
+
+        except Exception as erro:
+            self.__status = StatusExecucao.Erro
+            self.__mensagem = f'Ocorreu o erro {erro}.' + ' Ao tentar ler o arquivo de script. Método < executaArquivoScript >'
+            arq.close()
+            return
+
+        # Execupa/Aplica o Script
+        try:
+            self.executaSQL(script)
+        except Exception as erro:
+            self.__status = StatusExecucao.Erro
+            self.__mensagem = f'Ocorreu o erro {erro}. Ao executar o método < executaArquivoScript >'
+        else:
+            if self.__status != StatusExecucao.Sucesso:
+                self.__mensagem += f'. Ao executar o método < executaArquivoScript >'
 
     # (executaSQL) Método que Executa uma Instrução, Conforme a Cáusula Informada
     def executaSQL(self, SQL):

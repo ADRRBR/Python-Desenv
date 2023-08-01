@@ -1,0 +1,7 @@
+[CAMINHO]|C:\ADRRBR\Python\Projetos\Projetos_Desenv\venv\ConfigArquivos\
+[NOME]|Clientes.xlsx
+[PASTA TRABALHO]|INC
+[LINHA INICIAL]|1
+[LINHA FINAL]|5000
+[FAIXA DE CELULAS]|A:H
+

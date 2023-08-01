@@ -6,7 +6,7 @@ from Classes.APL_Clientes import clsClientes
 
 # -------------------------------- ARQUIVOS DE LOG
 
-caminho = 'C:\ADRRBR\ConfigArquivos\LogExecucao\ '.strip()
+caminho = os.getcwd() + "\ConfigArquivos\LogExecucao\ ".strip()
 
 dt = dtm.now()
 dtf = dt.strftime('%Y%m%d_%H%M%S')
@@ -23,14 +23,14 @@ if not logExec:
 
 # -------------------------------- CONEXÃO COM O BANDO DE DADOS
 
-RegistraLinhaArquivo(logExec, 'Preparando o Acesso à Classe < Conexao >...', True)
+RegistraLinhaArquivo(logExec,'Preparando o Acesso à Classe < Conexao >...', True)
 RegistraLinhaArquivo(logExec,'Conectando ao banco de dados...', True)
 
 conexao = clsConexaoBancoDados.ConexaoSQLServer()
 conexao.conectaArquivoConfig('', '')
 if conexao.status != StatusExecucao.Sucesso:
     RegistraLinhaArquivo(logExec, conexao.mensagem, True)
-    sys.exit(planilha.mensagem)
+    sys.exit(conexao.mensagem)
 
 if conexao.conectado:
     RegistraLinhaArquivo(logExec, 'A conexão com o SQL Server foi bem sucedida!', True)
