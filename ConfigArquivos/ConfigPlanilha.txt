@@ -1,7 +1,7 @@
 ***** As informações entre [ ] são palavras reservadas e o caracter | é utilizado como separador entre a palavra reservada e o dado informado para configuração.
 
 ***** Informe aqui o caminho onde se encontra a planilha. 
-[CAMINHO]|C:\ADRRBR\Python\Projetos\Executa\
+[CAMINHO]|C:\Temp\Executa-ImportaClientes-Planilha\Executa\
 
 ***** Informe aqui o nome da planilha. 
 [NOME]|Clientes.xlsx
@@ -18,7 +18,7 @@
 ***** Porém, caso queira apenas 2 registros deverá informar a linha 3 (a primeira linha sempre será assumida como cabeçalho).
 [LINHA FINAL]|5000
 
-***** Informe aqui a faixa de células para leitura da planilha na pasta de trabalho informada. Exemplo: B:D,F,G:H (célula B à D - F - G à H)
+***** Informe aqui a faixa de células para leitura da planilha na pasta de trabalho informada. Exemplo: B:D,F,G:H (célula B a D - F - G a H)
 [FAIXA DE CELULAS]|A:H
 
-***** Se você preferir, após ter e entendido os comentários pode eliminar as linhas comentadas (iniciadas com *****). 
+***** Se você preferir, após ter entendido os comentários pode eliminar as linhas comentadas (iniciadas com *****). 

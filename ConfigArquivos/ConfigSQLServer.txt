@@ -3,18 +3,16 @@
 ***** Coloque aqui as palavras reservadas < AUTENTICACAO WINDOWS > ou < AUTENTICACAO SQL SERVER > 
 [TIPO CONEXAO SQL SERVER]|AUTENTICACAO WINDOWS
 
-***** Coloque aqui seu servidor de banco de dados SQLServer (LAPTOP-NC2UQK3P\SQLEXPRESS é o meu!)
+***** Coloque aqui seu servidor de banco de dados SQLServer (LAPTOP-NC2UQK3P\SQLEXPRESS é o meu!).
 [SERVIDOR SQL SERVER]|LAPTOP-NC2UQK3P\SQLEXPRESS
 
-***** Coloque aqui seu banco de dados SQLServer (BD_ADRRBR é o meu!) - O script < CriaBancoDados_e_Estrutura.sql > cria o banco de dados < DB_ADRRBR > mas você pode mudar no script.
+***** Coloque aqui seu banco de dados SQLServer (BD_ADRRBR é o meu!).
 [BANCO DADOS SQL SERVER]|BD_ADRRBR
 
-***** Coloque aqui seu usuario SQLServer caso utilize -> [TIPO CONEXAO SQL SERVER]AUTENTICACAO SQL SERVER
+***** Coloque aqui seu usuário SQLServer caso tenha informado acima -> [TIPO CONEXAO SQL SERVER]|AUTENTICACAO SQL SERVER
 [USUARIO SQL SERVER]|SEU_USUARIO_SQL_SERVER         
 
-***** Coloque aqui a senha do seu usuario SQLServer caso tenha informado -> [USUARIO SQL SERVER]
+***** Coloque aqui a senha do seu usuário SQLServer caso tenha informado acima -> [USUARIO SQL SERVER]
 [SENHA SQL SERVER]|SUA_SENHA_USUARIO_SQL_SERVER 
 
-***** Se você preferir, após ter e entendido os comentários pode eliminar as linhas comentadas (iniciadas com *****). 
-
-
+***** Se você preferir, após ter entendido os comentários pode eliminar as linhas comentadas (iniciadas com *****).
